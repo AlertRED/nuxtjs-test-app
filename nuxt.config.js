@@ -43,6 +43,7 @@ export default {
         scheme: 'refresh',
         token: {
           property: 'access',
+          global: true,
           maxAge: 1800,
           type: 'Bearer'
         },
@@ -53,6 +54,7 @@ export default {
         },
         endpoints: {
           login: { url: '/api/token/', method: 'post' },
+          logout: { url: '/api/logout', method: 'post' },
           refresh: { url: '/api/refresh_token/', method: 'post' },
           user: { url: '/api/profile/', method: 'get' },
           logout: false
